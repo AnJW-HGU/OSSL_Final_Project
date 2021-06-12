@@ -36,4 +36,4 @@ Send email to me.
 > 22000404@handong.edu
 
 ## VIDEO PRESENTATION
-See [the video]()
+See [the video](https://youtu.be/gwhHm6dE1vE)
