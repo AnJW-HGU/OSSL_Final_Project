@@ -1,4 +1,7 @@
 var time = 0;
+var t_h = 0;
+var t_m = 0;
+var t_s = 0;
 var starFlag = true;
 $(document).ready(function(){
   buttonEvt();
@@ -18,8 +21,8 @@ function buttonEvt(){
   $("#startbtn").click(function(){
 
     if(starFlag){
-      $(".fa").css("color","#FAED7D")
-      this.style.color = "#4C4C4C";
+      $(".fa").css("color","#f8ca00")
+      this.style.color = "#FAED7D";
       starFlag = false;
 
       if(time == 0){
@@ -37,6 +40,17 @@ function buttonEvt(){
         var th = hour;
         var tm = min;
         var ts = sec;
+        
+        t_s++;
+        if(t_s >= 60){
+            t_m++;
+            t_s %= 60;
+        }
+        if(t_m >= 60){
+            t_h++;
+            t_m &= 60;
+        }
+        
         if(th<10){
         th = "0" + hour;
         }
@@ -46,8 +60,8 @@ function buttonEvt(){
         if(ts < 10){
         ts = "0" + sec;
         }
-
         document.getElementById("time").innerHTML = th + ":" + tm + ":" + ts;
+        document.getElementById("total").innerHTML = t_h + ":" + t_m + ":" + t_s;
       }, 1000);
     }
   });
@@ -55,8 +69,8 @@ function buttonEvt(){
   // pause btn
   $("#pausebtn").click(function(){
     if(time != 0){
-      $(".fa").css("color","#FAED7D")
-      this.style.color = "#4C4C4C";
+      $(".fa").css("color","#f8ca00")
+      this.style.color = "#FAED7D";
       clearInterval(timer);
       starFlag = true;
     }
@@ -65,12 +79,14 @@ function buttonEvt(){
   // stop btn
   $("#stopbtn").click(function(){
     if(time != 0){
-      $(".fa").css("color","#FAED7D")
-      this.style.color = "#4C4C4C";
+      $(".fa").css("color","#f8ca00")
+      this.style.color = "#FAED7D";
       clearInterval(timer);
       starFlag = true;
+      document.getElementById("total").innerHTML = t_h + ":" + t_m + ":" + t_s;
       time = 0;
       init();
     }
   });
 }
+

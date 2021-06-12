@@ -2,6 +2,8 @@
 <html>
 <head>
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400&display=swap');
+	
 	*{
 		margin: 0px;
 		padding: 0px;
@@ -9,7 +11,7 @@
   	body{
 		height: 100vh;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
  	}
@@ -19,7 +21,7 @@
 	}
 	.timerBox{
 		width: 200px;
-		outline: 2px solid black;
+		border: 2px solid #4C4C4C;
 	}
 	.timerBox .time{
 		font-size: 30pt;
@@ -34,16 +36,26 @@
 	.btnBox .fa{
 		margin: 0px 5px;
 		font-size: 30pt;
-		color: #FAED7D;
+		color: #f8ca00;
 		cursor: pointer;
 	}
+	.total{
+		font-size:30px;
+		color: #4C4C4C;
+		text-align: center;
+		font-family: 'Baloo Tammudu 2', cursive;
+	}
 </style>
+	
 <meta charset="UTF-8">
-<title>StopWatch</title>
+<title>Study Watch</title>
+	
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="stopwatch.js"></script>
 </head>
+	
 <body>
 	<div id='box' class="box">
 		<div id='timerBox' class="timerBox">
@@ -55,5 +67,16 @@
 			<i id="stopbtn" class="fa fa-stop" aria-hidden="true"></i>
 		</div>
 	</div>
+	
+	<div>
+		<hr style="border: solid 2px #FAED7D">
+		<p class="total">
+			<span style="">
+				TOTAL AMOUNT OF STUDY
+			</span>
+			<span id=total class="total" style="font-size:30px; color:#f8ca00;">0:0:0</span>
+		</p>
+	</div>
 </body>
 </html>
+
