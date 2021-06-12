@@ -21,8 +21,15 @@ Study Watch is a stopwatch used for _**studying**_.<br>
   >> - document.setElementById("").innerHTML
 
 ## Why is this project useful?
+This stopwatch projrct, which measures study time, is made _**only with mobile applications**_ and does _**not support PC version.**_
+Study YouTubers make their own PCs stopwatch and use it.<br>
+So, I implemented a **stopwatch** based on a pretty design, and I was able to save **the total time**.<br>
+This project is useful not only for me, but also for study YouTubers and **people who study with PCs**.
 
 ## How do I get started?
+* All you need is the Internet.
+  > 1. Download ZIP.
+  > 2. Open studyWatch.html with ANY Internet browsers.
 
 ## Where can I get more help, if I need it?
 Send email to me.
